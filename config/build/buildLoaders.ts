@@ -37,6 +37,28 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]{
             loader: 'file-loader',
         },
     ],
+    };
+
+    const babelLoader = {
+                test: /\.m?[jt]sx?$/,
+                exclude: /node_modules/,
+                use:{
+                    loader: 'babel-loader',
+                    options: {
+                        "presets": ["@babel/preset-env"],
+                        "plugins": [
+                            ["i18next-extract",
+                                {
+                                    "nsSeparator": "~",
+                                    "locales": ["en", "ru"],
+                                    keyAsDefaultValue: true
+                                },
+                            ]
+
+                        ]
+                    }
+                }
+
     }
 
     const typescriptLoader = {
@@ -48,6 +70,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]{
     return [
         fileLoader,
         svgLoader,
+        babelLoader,
         typescriptLoader,
         cssLoader
     ]
