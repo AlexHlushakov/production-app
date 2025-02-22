@@ -1,4 +1,5 @@
 {
+  "404 Page not found": "404 Page not found",
   "About Page": "About Page",
   "Close Sidebar": "Close Sidebar",
   "Language": "Language",
@@ -6,5 +7,7 @@
   "Link Main": "Link Main",
   "Main Page": "Main Page",
   "Open Sidebar": "Open Sidebar",
+  "Reload Page": "Reload Page",
+  "Unknown error has occurred": "Unknown error has occurred",
   "loading": "loading"
 }
