@@ -30,5 +30,9 @@ jobs:
         run: npm run test:unit
       - name: build Storybook static files
         run: npm run storybook:build
-      - name: screenshot testing
+      - name: run Storybook
+        run: npm run storybook
+      - name: screenshot testing ui
+        run: npm run test:ui
+      - name: screenshot testing ci
         run: npm run test:ui:ci
