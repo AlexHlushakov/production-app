@@ -9,5 +9,6 @@
   "loading": "loading",
   "404 Page not found": "404 Page not found",
   "Unknown error has occurred": "Unknown error has occurred",
-  "Reload Page": "Reload Page"
+  "Reload Page": "Reload Page",
+  "Throw Error": "Throw Error"
 }
