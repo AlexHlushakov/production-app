@@ -21,9 +21,6 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             DEV: JSON.stringify(isDev),
         }),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
     ];
 
     if (isDev) {
@@ -31,6 +28,9 @@ export function buildPlugins({
             overlay: false,
         }));
         plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }));
     }
 
     return plugins;
