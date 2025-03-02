@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '17.x'
+      - name: Use Docker
+        uses: docker/setup-docker-action@v4
       - name: install modules
         run: npm install
       - name: build production project
