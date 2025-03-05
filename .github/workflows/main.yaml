@@ -16,7 +16,7 @@ jobs:
       - name: Starting Node.js
         uses: action/setup-node@v1
         with:
-          node-version: 17.x
+          node-version: [17.x]
 #      - name: start_desktop
 #        uses: docker/desktop-action/start@v0.1.0
       - name: install modules
