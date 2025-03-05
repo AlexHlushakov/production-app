@@ -6,12 +6,13 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "lint:ts-check": "eslint \"**/*.{ts,tsx}\"\n",
-    "lint:ts-fix": "eslint \"**/*.{ts,tsx}\"\n --fix",
-    "lint:scss-check": "stylelint \"**/*.scss\"\n",
-    "lint:scss-fix": "stylelint \"**/*.scss\"\n --fix",
+    "lint:ts:check": "eslint \"**/*.{ts,tsx}\"\n",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\"\n --fix",
+    "lint:scss:check": "stylelint \"**/*.scss\"\n",
+    "lint:scss:fix": "stylelint \"**/*.scss\"\n --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "loki test",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "test:ui:approve": "loki approve",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook"
@@ -90,14 +91,14 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "preset": "iPhone 7"
       }
     }
