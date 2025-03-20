@@ -6,8 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({
-    paths,
-    isDev,
+    paths, isDev, apiUrl,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins: webpack.WebpackPluginInstance[] = [
         new HTMLWebpackPlugin({
@@ -18,16 +17,21 @@ export function buildPlugins({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
         }),
-        new webpack.DefinePlugin({
-            DEV: JSON.stringify(isDev),
+        new webpack.EnvironmentPlugin({
+            NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
+            DEBUG: false,
+            __API__: apiUrl,
         }),
+        // new webpack.DefinePlugin({
+        //     // __DEV__: JSON.stringify(isDev),
+        //     // __API__: JSON.stringify(apiUrl),
+        // }),
     ];
 
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin({
             overlay: false,
         }));
-        plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }));

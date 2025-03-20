@@ -1,0 +1,37 @@
+.sidebar {
+    background: var(--inverted-bg-color);
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    position: relative;
+    transition: width 0.2s;
+}
+
+.switchers {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.items {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .switchers {
+        flex-direction: column;
+    }
+}
+
+.collapseBtn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
+}

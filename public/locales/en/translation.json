@@ -1,6 +1,7 @@
 {
   "Link Main": "Main",
   "Link About": "About",
+  "Link Profile": "Profile",
   "Language": "English",
   "Language Short": "En",
   "Main Page": "Main Page",
@@ -11,5 +12,11 @@
   "404 Page not found": "404 Page not found",
   "Unknown error has occurred": "Unknown error has occurred",
   "Reload Page": "Reload Page",
-  "Throw Error": "Throw Error"
+  "Throw Error": "Throw Error",
+  "Login Form": "Login Form",
+  "Wrong Username or Password": "Wrong Username or Password",
+  "Enter Username": "Enter Username",
+  "Enter Password": "Enter Password",
+  "Login": "Login",
+  "Logout": "Logout"
 }

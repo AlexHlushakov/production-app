@@ -1,8 +1,8 @@
-.app.light {
-    --bg-color: #ccccd0;
-    --inverted-bg-color: #090981;
-    --primary-color: #0801af;
-    --secondary-color: #2a0186;
-    --inverted-primary-color: #b1d701;
-    --inverted-secondary-color: #c96604;
+.light {
+    --bg-color: var(--bg-color-light);
+    --inverted-bg-color: var(--bg-color-dark);
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --inverted-primary-color: var(--primary-color-dark);
+    --inverted-secondary-color: var(--secondary-color-dark);
 }

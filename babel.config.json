@@ -5,14 +5,5 @@
     ["@babel/preset-react", {
       "runtime": "automatic"
     }]],
-  "plugins": [
-    [
-      "i18next-extract",
-      {
-        "nsSeparator": "~",
-        "locales": ["en", "ru"],
-        "keyAsDefaultValue": true
-      }
-    ]
-  ]
+  "plugins": []
 }

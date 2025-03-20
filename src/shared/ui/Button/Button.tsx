@@ -5,10 +5,11 @@ import cls from './Button.module.scss';
 export enum ButtonTheme {
     // eslint-disable-next-line no-unused-vars
     CLEAR = 'clear',
+    CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
     OUTLINE_INVERTED = 'outlineInverted',
     BACKGROUND = 'background',
-    BACKGROUND_INVERTED = 'backgroundInverted'
+    BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
 export enum ButtonSize {
@@ -23,6 +24,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   themeBtn?: ButtonTheme;
   square? : boolean;
   size?: ButtonSize;
+  disabled?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -32,6 +34,7 @@ export const Button: FC<ButtonProps> = (props) => {
         children,
         square,
         size,
+        disabled,
         ...otherProps
     } = props;
 
@@ -43,6 +46,7 @@ export const Button: FC<ButtonProps> = (props) => {
         <button
             type="button"
             className={classNames(cls.button, mods, [className, cls[themeBtn], cls[size]])}
+            disabled={disabled}
             {...otherProps}
         >
             {children}

@@ -1,0 +1,19 @@
+.item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--inverted-primary-color);
+}
+
+.link {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.collapsed {
+    .link {
+        // opacity: 0;
+        // transition: 0.2s display;
+        display: none;
+    }
+}

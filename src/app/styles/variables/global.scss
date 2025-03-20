@@ -17,4 +17,20 @@
     --navbar-height: 50px;
     --sidebar-width: 200px;
     --sidebar-width-collapsed: 70px;
+
+    // z-index
+    --modal-z-index: 10;
+
+    // colors
+    --overlay-color: rgba(0 0 0 / 60%);
+    --red-light: #f00;
+    --red-dark: #ce0505;
+
+    // themes
+    --bg-color-light: #ccccd0;
+    --primary-color-light: #0801af;
+    --secondary-color-light: #2a0186;
+    --bg-color-dark: #090981;
+    --primary-color-dark: #b1d701;
+    --secondary-color-dark: #c96604;
 }
